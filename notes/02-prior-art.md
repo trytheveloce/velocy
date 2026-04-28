@@ -6,3 +6,4 @@
 - Filecoin: storage-focused DePIN, established model
 
 The gap: a marketplace where GPU yield is the primary value prop, not the compute itself.
+<!-- n9 -->
