@@ -8,3 +8,4 @@ Key variables:
 - rate is dynamic (supply/demand)
 
 Settlements happen per block on L2 for low fees.
+<!-- n10 -->
