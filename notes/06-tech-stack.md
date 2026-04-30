@@ -6,3 +6,4 @@
 - vitest for tests (fast, ESM-first)
 
 Rejected: yargs (too much config), oclif (overkill for thin client).
+<!-- n13 -->
