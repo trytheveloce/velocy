@@ -9,3 +9,4 @@ Key variables:
 
 Settlements happen per block on L2 for low fees.
 <!-- n10 -->
+<!-- n18 -->
