@@ -8,3 +8,4 @@
 The gap: a marketplace where GPU yield is the primary value prop, not the compute itself.
 <!-- n9 -->
 <!-- n17 -->
+<!-- n25 -->
