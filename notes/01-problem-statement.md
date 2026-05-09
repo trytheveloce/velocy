@@ -4,3 +4,4 @@ GPU compute is centralized. Cloud providers (AWS, GCP, Azure) own the capacity. 
 
 What if compute could be tokenized? Holders earn from the work the hardware does. Operators get capital up front without VC dilution.
 <!-- n16 -->
+<!-- n24 -->
