@@ -1,0 +1,48 @@
+{
+  "name": "velocy",
+  "version": "0.1.0",
+  "description": "Command-line interface for the Veloce compute marketplace",
+  "main": "dist/index.js",
+  "bin": {
+    "velocy": "dist/index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "ts-node src/index.ts",
+    "test": "vitest run",
+    "lint": "eslint src --ext .ts"
+  },
+  "keywords": [
+    "veloce",
+    "gpu",
+    "compute",
+    "depin",
+    "rwa",
+    "cli"
+  ],
+  "author": "Veloce",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/trytheveloce/velocy.git"
+  },
+  "homepage": "https://useveloce.xyz",
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "chalk": "^5.3.0",
+    "commander": "^12.1.0",
+    "ora": "^8.0.1",
+    "cli-table3": "^0.6.5"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.5",
+    "vitest": "^1.6.0",
+    "eslint": "^8.57.0",
+    "@typescript-eslint/parser": "^7.0.0",
+    "@typescript-eslint/eslint-plugin": "^7.0.0"
+  }
+}
