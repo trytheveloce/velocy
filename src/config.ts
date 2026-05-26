@@ -31,4 +31,3 @@ export function loadConfig(): VeloceConfig {
     walletAddress: process.env.VELOCE_WALLET || fileConfig.walletAddress,
   };
 }
-// p48

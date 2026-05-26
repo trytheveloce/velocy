@@ -141,4 +141,3 @@ MIT — see [LICENSE](LICENSE)
 <div align="center">
 <img src="https://capsule-render.vercel.app/api?type=waving&color=0:3b82f6,50:0a0a0a,100:0a0a0a&height=100&section=footer&animation=fadeIn" width="100%" alt="footer"/>
 </div>
-<!-- p45 -->

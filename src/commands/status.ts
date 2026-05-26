@@ -30,4 +30,3 @@ export function registerStatus(program: Command): void {
       }
     });
 }
-// p46
