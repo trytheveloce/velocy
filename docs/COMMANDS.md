@@ -62,3 +62,4 @@ Operator-only command to pair a local GPU with the network. Currently prints onb
 ```bash
 velocy connect --device /dev/nvidia0
 ```
+<!-- p49 -->
