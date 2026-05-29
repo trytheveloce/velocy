@@ -1,13 +1,13 @@
 # Commands
 
-Full reference for the `velocy` CLI.
+Full reference for the `tensor` CLI.
 
 ## `status`
 
-Print a snapshot of the Veloce network: total/active nodes, hashrate, 24h uptime, rewards distributed, and TVL.
+Print a snapshot of the Tensor network: total/active nodes, hashrate, 24h uptime, rewards distributed, and TVL.
 
 ```bash
-velocy status
+tensor status
 ```
 
 ## `nodes ls`
@@ -15,9 +15,9 @@ velocy status
 List nodes registered on the network. Supports filtering.
 
 ```bash
-velocy nodes ls
-velocy nodes ls --uptime 95
-velocy nodes ls --category gpu
+tensor nodes ls
+tensor nodes ls --uptime 95
+tensor nodes ls --category gpu
 ```
 
 | Flag                  | Description                              |
@@ -30,7 +30,7 @@ velocy nodes ls --category gpu
 Print detailed metrics for a single node, including hardware type, uptime, hashrate, and current APY.
 
 ```bash
-velocy nodes info veloce-node-0x4f2a
+tensor nodes info tensor-node-0x4f2a
 ```
 
 ## `yield`
@@ -38,9 +38,9 @@ velocy nodes info veloce-node-0x4f2a
 Show current yield by category over a chosen window.
 
 ```bash
-velocy yield
-velocy yield --window 7d
-velocy yield --window 30d
+tensor yield
+tensor yield --window 7d
+tensor yield --window 30d
 ```
 
 ## `balance <address>`
@@ -48,17 +48,17 @@ velocy yield --window 30d
 Show the share count, accrued rewards, and currently claimable amount for an address.
 
 ```bash
-velocy balance 0x1234...abcd
+tensor balance 0x1234...abcd
 ```
 
 ## `claim`
 
-Triggers the claim flow. Requires a configured wallet (env `VELOCE_WALLET` or `~/.velocy/config.json`). Browser signing is currently the only supported path; the CLI prints instructions.
+Triggers the claim flow. Requires a configured wallet (env `TENSOR_WALLET` or `~/.tensor/config.json`). Browser signing is currently the only supported path; the CLI prints instructions.
 
 ## `connect`
 
 Operator-only command to pair a local GPU with the network. Currently prints onboarding instructions; full pairing is in private beta.
 
 ```bash
-velocy connect --device /dev/nvidia0
+tensor connect --device /dev/nvidia0
 ```

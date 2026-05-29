@@ -2,16 +2,16 @@
 
 ## Overview
 
-`velocy` is a thin client. All network state lives behind the Veloce API; the CLI translates that state into human-readable output.
+`tensor` is a thin client. All network state lives behind the Tensor API; the CLI translates that state into human-readable output.
 
 ```
 ┌──────────────┐    HTTPS    ┌─────────────────────┐
-│  velocy CLI  │ ──────────► │  api.useveloce.xyz  │
+│  tensor CLI  │ ──────────► │  api.tensorcompute.xyz  │
 └──────────────┘             └─────────────────────┘
                                       │
                                       ▼
                               ┌────────────────┐
-                              │  Veloce chain  │
+                              │  Tensor chain  │
                               │  (Base L2)     │
                               └────────────────┘
 ```
@@ -21,7 +21,7 @@
 - **`src/index.ts`** — commander entrypoint. Registers subcommands and dispatches.
 - **`src/api/client.ts`** — typed wrapper around the REST API. One method per endpoint, no caching.
 - **`src/commands/*`** — one file per top-level command. Each module exports a `register*` function that attaches itself to the program.
-- **`src/config.ts`** — three-tier config resolution: env → `~/.velocy/config.json` → defaults.
+- **`src/config.ts`** — three-tier config resolution: env → `~/.tensor/config.json` → defaults.
 - **`src/utils/format.ts`** — pure formatters. Tested in isolation.
 
 ## Design rules

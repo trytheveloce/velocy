@@ -33,7 +33,7 @@ export interface Balance {
   claimable: string;
 }
 
-export class VeloceClient {
+export class TensorClient {
   private baseUrl: string;
 
   constructor(baseUrl?: string) {
@@ -67,7 +67,7 @@ export class VeloceClient {
   private async request<T>(path: string): Promise<T> {
     const url = `${this.baseUrl}${path}`;
     const res = await fetch(url, {
-      headers: { 'Accept': 'application/json', 'User-Agent': 'velocy-cli/0.1.0' },
+      headers: { 'Accept': 'application/json', 'User-Agent': 'tensor-cli/0.1.0' },
     });
     if (!res.ok) {
       throw new Error(`Request failed: ${res.status} ${res.statusText}`);

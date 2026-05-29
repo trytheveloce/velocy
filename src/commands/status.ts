@@ -1,7 +1,7 @@
 import { Command } from 'commander';
 import chalk from 'chalk';
 import ora from 'ora';
-import { VeloceClient } from '../api/client';
+import { TensorClient } from '../api/client';
 import { formatPercent, formatUSD } from '../utils/format';
 
 export function registerStatus(program: Command): void {
@@ -11,12 +11,12 @@ export function registerStatus(program: Command): void {
     .action(async () => {
       const spinner = ora('Fetching network status…').start();
       try {
-        const client = new VeloceClient();
+        const client = new TensorClient();
         const stats = await client.getStatus();
         spinner.stop();
 
         console.log();
-        console.log(chalk.bold.cyan('Veloce Network'));
+        console.log(chalk.bold.cyan('Tensor Network'));
         console.log(chalk.gray('─'.repeat(40)));
         console.log(`Active nodes        ${chalk.white(stats.activeNodes)} / ${chalk.gray(stats.totalNodes)}`);
         console.log(`Total hashrate      ${chalk.white(stats.totalHashrate)}`);

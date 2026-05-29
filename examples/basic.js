@@ -1,10 +1,10 @@
-// Programmatic usage of the Veloce client.
-// Requires `npm install velocy` (or local link via `npm link`).
+// Programmatic usage of the Tensor client.
+// Requires `npm install tensor` (or local link via `npm link`).
 
-const { VeloceClient } = require('velocy/dist/api/client');
+const { TensorClient } = require('tensor/dist/api/client');
 
 async function main() {
-  const client = new VeloceClient();
+  const client = new TensorClient();
 
   const status = await client.getStatus();
   console.log('Active nodes:', status.activeNodes);

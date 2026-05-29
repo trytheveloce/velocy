@@ -2,7 +2,7 @@ import { Command } from 'commander';
 import chalk from 'chalk';
 import ora from 'ora';
 import Table from 'cli-table3';
-import { VeloceClient } from '../api/client';
+import { TensorClient } from '../api/client';
 import { formatPercent } from '../utils/format';
 
 export function registerNodes(program: Command): void {
@@ -16,7 +16,7 @@ export function registerNodes(program: Command): void {
     .action(async (opts) => {
       const spinner = ora('Loading nodes…').start();
       try {
-        const client = new VeloceClient();
+        const client = new TensorClient();
         const nodeList = await client.listNodes({
           minUptime: opts.uptime ? Number(opts.uptime) : undefined,
           category: opts.category,
@@ -54,7 +54,7 @@ export function registerNodes(program: Command): void {
     .action(async (id: string) => {
       const spinner = ora(`Fetching ${id}…`).start();
       try {
-        const client = new VeloceClient();
+        const client = new TensorClient();
         const node = await client.getNode(id);
         spinner.stop();
 

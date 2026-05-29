@@ -1,48 +1,48 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0a0a0a,50:0a0a0a,100:3b82f6&height=240&section=header&text=velocy&fontSize=88&fontColor=ffffff&fontAlignY=38&desc=Command-line%20interface%20for%20the%20Veloce%20compute%20marketplace&descAlignY=62&descSize=16&animation=fadeIn" width="100%" alt="velocy"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0a0a0a,50:0a0a0a,100:C1FF72&height=240&section=header&text=tensor&fontSize=88&fontColor=ffffff&fontAlignY=38&desc=Command-line%20interface%20for%20the%20Tensor%20compute%20marketplace&descAlignY=62&descSize=16&animation=fadeIn" width="100%" alt="tensor"/>
 
-<a href="https://github.com/trytheveloce/velocy">
-  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=18&pause=1000&color=3b82f6&center=true&vCenter=true&width=720&lines=tokenized+GPU+compute;onchain+yield+from+real+infrastructure;every+node+benchmarked%2C+every+reward+verifiable;built+for+the+AI+economy" alt="typing"/>
+<a href="https://github.com/trytheveloce/tensor">
+  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=18&pause=1000&color=C1FF72&center=true&vCenter=true&width=720&lines=tokenized+GPU+compute;onchain+yield+from+real+infrastructure;every+node+benchmarked%2C+every+reward+verifiable;built+for+the+AI+economy" alt="typing"/>
 </a>
 
 <br/><br/>
 
-[![License](https://img.shields.io/badge/license-MIT-3b82f6?style=for-the-badge&labelColor=0a0a0a)](LICENSE)
-[![CI](https://img.shields.io/badge/ci-passing-3b82f6?style=for-the-badge&labelColor=0a0a0a)](../../actions)
-[![Release](https://img.shields.io/badge/release-v0.1.0-3b82f6?style=for-the-badge&labelColor=0a0a0a)](../../releases)
+[![License](https://img.shields.io/badge/license-MIT-C1FF72?style=for-the-badge&labelColor=0a0a0a)](LICENSE)
+[![CI](https://img.shields.io/badge/ci-passing-C1FF72?style=for-the-badge&labelColor=0a0a0a)](../../actions)
+[![Release](https://img.shields.io/badge/release-v0.1.0-C1FF72?style=for-the-badge&labelColor=0a0a0a)](../../releases)
 
-[![stars](https://img.shields.io/github/stars/trytheveloce/velocy?style=flat-square&color=3b82f6&labelColor=0a0a0a)](../../stargazers)
-[![forks](https://img.shields.io/github/forks/trytheveloce/velocy?style=flat-square&color=3b82f6&labelColor=0a0a0a)](../../network)
-[![issues](https://img.shields.io/github/issues/trytheveloce/velocy?style=flat-square&color=3b82f6&labelColor=0a0a0a)](../../issues)
-[![last commit](https://img.shields.io/github/last-commit/trytheveloce/velocy?style=flat-square&color=3b82f6&labelColor=0a0a0a)](../../commits)
+[![stars](https://img.shields.io/github/stars/trytheveloce/tensor?style=flat-square&color=C1FF72&labelColor=0a0a0a)](../../stargazers)
+[![forks](https://img.shields.io/github/forks/trytheveloce/tensor?style=flat-square&color=C1FF72&labelColor=0a0a0a)](../../network)
+[![issues](https://img.shields.io/github/issues/trytheveloce/tensor?style=flat-square&color=C1FF72&labelColor=0a0a0a)](../../issues)
+[![last commit](https://img.shields.io/github/last-commit/trytheveloce/tensor?style=flat-square&color=C1FF72&labelColor=0a0a0a)](../../commits)
 
-[Website](https://useveloce.xyz) · [Docs](./docs) · [Twitter](https://x.com/useveloce)
+[Website](https://tensorcompute.xyz) · [Docs](./docs) · [Twitter](https://x.com/useveloce)
 
 </div>
 
 ---
 
-## What is velocy?
+## What is tensor?
 
-`velocy` is the official CLI for interacting with the Veloce network — a marketplace for tokenized GPU compute. Query network state, monitor node performance, track yield, and manage operator workflows from your terminal.
+`tensor` is the official CLI for interacting with the Tensor network — a marketplace for tokenized GPU compute. Query network state, monitor node performance, track yield, and manage operator workflows from your terminal.
 
-The Veloce protocol turns physical GPU infrastructure into onchain, yield-bearing assets. `velocy` is the thin client that exposes that state.
+The Tensor protocol turns physical GPU infrastructure into onchain, yield-bearing assets. `tensor` is the thin client that exposes that state.
 
 ## Quick Start
 
 ```bash
-npm install -g velocy
+npm install -g tensor
 
-velocy status
-velocy nodes ls --uptime 95
-velocy yield --window 7d
+tensor status
+tensor nodes ls --uptime 95
+tensor yield --window 7d
 ```
 
 Or one-off without installing:
 
 ```bash
-npx velocy status
+npx tensor status
 ```
 
 ## Commands
@@ -63,28 +63,28 @@ Full reference: [docs/COMMANDS.md](docs/COMMANDS.md)
 
 ```bash
 # Network snapshot
-velocy status
+tensor status
 
 # Top-performing GPU nodes
-velocy nodes ls --category gpu --uptime 99
+tensor nodes ls --category gpu --uptime 99
 
 # Yield over the last 30 days
-velocy yield --window 30d
+tensor yield --window 30d
 
 # Check a holder's claimable rewards
-velocy balance 0x4f2a8d3c1e9b6a7f5d8c2e1b9a3f7d6c5e4b2a1f
+tensor balance 0x4f2a8d3c1e9b6a7f5d8c2e1b9a3f7d6c5e4b2a1f
 ```
 
 ## Architecture
 
 ```
 ┌──────────────┐    HTTPS    ┌─────────────────────┐
-│  velocy CLI  │ ──────────► │  api.useveloce.xyz  │
+│  tensor CLI  │ ──────────► │  api.tensorcompute.xyz  │
 └──────────────┘             └─────────────────────┘
                                       │
                                       ▼
                               ┌────────────────┐
-                              │  Veloce chain  │
+                              │  Tensor chain  │
                               │  (Base L2)     │
                               └────────────────┘
 ```
@@ -93,24 +93,24 @@ See [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) for module-level detail.
 
 ## Configuration
 
-Configuration is resolved in three tiers: env vars → `~/.velocy/config.json` → defaults.
+Configuration is resolved in three tiers: env vars → `~/.tensor/config.json` → defaults.
 
 ```bash
-export VELOCE_API_URL=https://api.useveloce.xyz
-export VELOCE_NETWORK=base
-export VELOCE_WALLET=0x...
+export TENSOR_API_URL=https://api.tensorcompute.xyz
+export TENSOR_NETWORK=base
+export TENSOR_WALLET=0x...
 ```
 
 ## Development
 
 ```bash
-git clone https://github.com/trytheveloce/velocy
-cd velocy
+git clone https://github.com/trytheveloce/tensor
+cd tensor
 npm install
 npm run build
 npm link
 
-velocy status
+tensor status
 ```
 
 Run tests:
@@ -130,14 +130,14 @@ npm test
 
 ## Links
 
-- Website — [useveloce.xyz](https://useveloce.xyz)
+- Website — [tensorcompute.xyz](https://tensorcompute.xyz)
 - Twitter — [@useveloce](https://x.com/useveloce)
-- Issues — [github.com/trytheveloce/velocy/issues](https://github.com/trytheveloce/velocy/issues)
+- Issues — [github.com/trytheveloce/tensor/issues](https://github.com/trytheveloce/tensor/issues)
 
 ## License
 
 MIT — see [LICENSE](LICENSE)
 
 <div align="center">
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:3b82f6,50:0a0a0a,100:0a0a0a&height=100&section=footer&animation=fadeIn" width="100%" alt="footer"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:C1FF72,50:0a0a0a,100:0a0a0a&height=100&section=footer&animation=fadeIn" width="100%" alt="footer"/>
 </div>
