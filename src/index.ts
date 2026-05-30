@@ -11,8 +11,8 @@ import { registerConnect } from './commands/connect';
 const program = new Command();
 
 program
-  .name('tensor')
-  .description('Command-line interface for the Tensor compute marketplace')
+  .name('velocy')
+  .description('Command-line interface for the Veloce compute marketplace')
   .version('0.1.0');
 
 registerStatus(program);

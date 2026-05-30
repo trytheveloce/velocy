@@ -2,7 +2,7 @@ import { Command } from 'commander';
 import chalk from 'chalk';
 import ora from 'ora';
 import Table from 'cli-table3';
-import { TensorClient } from '../api/client';
+import { VeloceClient } from '../api/client';
 import { formatPercent, formatUSD } from '../utils/format';
 
 export function registerYield(program: Command): void {
@@ -13,7 +13,7 @@ export function registerYield(program: Command): void {
     .action(async (opts) => {
       const spinner = ora(`Fetching yield (${opts.window})…`).start();
       try {
-        const client = new TensorClient();
+        const client = new VeloceClient();
         const data = await client.getYield(opts.window);
         spinner.stop();
 

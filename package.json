@@ -1,10 +1,10 @@
 {
-  "name": "tensor",
+  "name": "velocy",
   "version": "0.1.0",
-  "description": "Command-line interface for the Tensor compute marketplace",
+  "description": "Command-line interface for the Veloce compute marketplace",
   "main": "dist/index.js",
   "bin": {
-    "tensor": "dist/index.js"
+    "velocy": "dist/index.js"
   },
   "scripts": {
     "build": "tsc",
@@ -13,20 +13,20 @@
     "lint": "eslint src --ext .ts"
   },
   "keywords": [
-    "tensor",
+    "veloce",
     "gpu",
     "compute",
     "depin",
     "rwa",
     "cli"
   ],
-  "author": "Tensor",
+  "author": "Veloce",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/trytheveloce/tensor.git"
+    "url": "git+https://github.com/trytheveloce/velocy.git"
   },
-  "homepage": "https://tensorcompute.xyz",
+  "homepage": "https://useveloce.xyz",
   "engines": {
     "node": ">=18"
   },

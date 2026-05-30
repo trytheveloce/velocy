@@ -2,21 +2,21 @@ import { readFileSync, existsSync } from 'fs';
 import { homedir } from 'os';
 import { join } from 'path';
 
-export interface TensorConfig {
+export interface VeloceConfig {
   apiUrl: string;
   network: 'base' | 'base-sepolia';
   walletAddress?: string;
 }
 
-const DEFAULTS: TensorConfig = {
-  apiUrl: 'https://api.tensorcompute.xyz',
+const DEFAULTS: VeloceConfig = {
+  apiUrl: 'https://api.useveloce.xyz',
   network: 'base',
 };
 
-export function loadConfig(): TensorConfig {
-  const configPath = join(homedir(), '.tensor', 'config.json');
+export function loadConfig(): VeloceConfig {
+  const configPath = join(homedir(), '.velocy', 'config.json');
 
-  let fileConfig: Partial<TensorConfig> = {};
+  let fileConfig: Partial<VeloceConfig> = {};
   if (existsSync(configPath)) {
     try {
       fileConfig = JSON.parse(readFileSync(configPath, 'utf-8'));
@@ -26,8 +26,8 @@ export function loadConfig(): TensorConfig {
   }
 
   return {
-    apiUrl: process.env.TENSOR_API_URL || fileConfig.apiUrl || DEFAULTS.apiUrl,
-    network: (process.env.TENSOR_NETWORK as TensorConfig['network']) || fileConfig.network || DEFAULTS.network,
-    walletAddress: process.env.TENSOR_WALLET || fileConfig.walletAddress,
+    apiUrl: process.env.VELOCE_API_URL || fileConfig.apiUrl || DEFAULTS.apiUrl,
+    network: (process.env.VELOCE_NETWORK as VeloceConfig['network']) || fileConfig.network || DEFAULTS.network,
+    walletAddress: process.env.VELOCE_WALLET || fileConfig.walletAddress,
   };
 }

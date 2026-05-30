@@ -1,7 +1,7 @@
 import { Command } from 'commander';
 import chalk from 'chalk';
 import ora from 'ora';
-import { TensorClient } from '../api/client';
+import { VeloceClient } from '../api/client';
 import { formatAddress, formatUSD } from '../utils/format';
 
 export function registerBalance(program: Command): void {
@@ -11,7 +11,7 @@ export function registerBalance(program: Command): void {
     .action(async (address: string) => {
       const spinner = ora('Fetching balance…').start();
       try {
-        const client = new TensorClient();
+        const client = new VeloceClient();
         const balance = await client.getBalance(address);
         spinner.stop();
 
